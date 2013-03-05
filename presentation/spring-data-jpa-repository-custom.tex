@@ -66,34 +66,3 @@ public class ContactRepositoryImpl implements ContactRepositoryCustom {
  \end{xmlcode}
 \end{frame}
 
-\begin{frame}[fragile]
- \frametitle{Travailler repository par repository}
- \begin{itemize}
-  \item Réglage avec \code{<jpa:repository />}
- \end{itemize}
- \begin{xmlcode}
-<jpa:repositories base-package="com.zenika.nordnet.repository">
-  <jpa:repository id="contactRepository" 
-                  repository-impl-postfix="Jpa"/>
-</jpa:repositories>
- \end{xmlcode}
-\end{frame}
-
-\begin{frame}[fragile]
- \frametitle{Portée de \code{<jpa:repository />}}
- \begin{itemize}
-  \item \code{<jpa:repository />} désactive la détection automatique des implémentations custom
-  \item Tous les repositories custom doivent être déclarés explicitement
- \end{itemize}
- \begin{xmlcode}
-<jpa:repositories base-package="com.zenika.nordnet.repository">
-  <jpa:repository id="contactRepository" 
-                  repository-impl-postfix="Jpa" />
-  <jpa:repository id="addressRepository" 
-                  custom-impl-ref="addressRepositoryCustom" />
-</jpa:repositories>
-
-<bean id="addressRepositoryCustom" 
-      class="c.z.nordnet.repository.JpaAddressRepositoryCustom" />
- \end{xmlcode}
-\end{frame}

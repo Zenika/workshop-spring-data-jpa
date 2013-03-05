@@ -28,7 +28,7 @@ public class SpringDataJpaRepositoryCustomTest {
 
 	@Autowired ContactRepository contactRepository;
 	
-	// TODO 10 injecter le AddressRepository
+	// TODO 09 injecter le AddressRepository
 	
 	@Autowired DataSource ds;
 	
@@ -46,7 +46,7 @@ public class SpringDataJpaRepositoryCustomTest {
 	// 2 cas de tests : un résultat trouvé et pas de résultat trouvé
 	
 	
-	// TODO 11 tester AddressRepository.findByExample
+	// TODO 10 tester AddressRepository.findByExample
 	// 2 cas de tests : un résultat trouvé et pas de résultat trouvé
 	
 }

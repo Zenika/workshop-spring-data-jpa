@@ -15,7 +15,7 @@ import com.zenika.nordnet.model.Address;
  * @author acogoluegnes
  *
  */
-public class JpaAddressRepositoryCustom implements AddressRepositoryCustom {
+public class AddressRepositoryImpl implements AddressRepositoryCustom {
 	
 	@PersistenceContext private EntityManager em;
 
