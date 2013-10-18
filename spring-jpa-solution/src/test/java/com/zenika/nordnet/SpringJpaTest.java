@@ -6,7 +6,7 @@ package com.zenika.nordnet;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
