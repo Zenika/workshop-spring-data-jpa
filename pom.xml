@@ -150,7 +150,7 @@
 
 
 	<properties>
-		<spring.data.jpa.version>1.4.1.RELEASE</spring.data.jpa.version>
+		<spring.data.jpa.version>1.4.2.RELEASE</spring.data.jpa.version>
 		<spring.version>3.2.4.RELEASE</spring.version>
 		<hibernate.version>3.6.10.Final</hibernate.version>
 		<querydsl.version>3.2.3</querydsl.version>
@@ -201,7 +201,16 @@
 				<configuration>
 					<forkCount>1</forkCount>
 					<reuseForks>true</reuseForks>
-					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+					<argLine>-Xmx1024m -XX:MaxPermSize=512m</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+					<meminitial>128m</meminitial>
+					<maxmem>512m</maxmem>
 				</configuration>
 			</plugin>
 		</plugins>
