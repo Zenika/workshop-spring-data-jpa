@@ -103,10 +103,10 @@ List<Contact> cs = em.createQuery(query.select(root)).getResultList();
  \frametitle{Une classe centralise les \code{Specification}s}
 
  \begin{javacode}
-package com.zenika.nordnet.repository;
+package com.zenika.repository;
 
 import org.springframework.data.jpa.domain.Specification;
-import com.zenika.nordnet.model.Contact;
+import com.zenika.model.Contact;
 
 public abstract class ContactSpecs {
 
@@ -179,7 +179,7 @@ public interface ContactRepository
 
  \begin{javacode}
 import static org.springframework.data.jpa.domain.Specifications.*;
-import static com.zenika.nordnet.repository.ContactSpecs.*;
+import static com.zenika.repository.ContactSpecs.*;
 (...)
 // avec import statique de ContactSpecs
 List<Contact> contacts = repo.findAll(outlaws());

@@ -32,7 +32,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.zenika.nordnet.business.AuthenticationService#authenticate(java.lang.String, java.lang.String)
+	 * @see com.zenika.business.AuthenticationService#authenticate(java.lang.String, java.lang.String)
 	 */
 	@Override
 	public User authenticate(String login, String password) {

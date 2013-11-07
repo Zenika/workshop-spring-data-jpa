@@ -20,7 +20,7 @@ public class ContactRepositoryImpl implements ContactRepositoryCustom {
 	@PersistenceContext private EntityManager em;
 
 	/* (non-Javadoc)
-	 * @see com.zenika.nordnet.repository.ContactRepositoryCustom#findByExample(com.zenika.nordnet.model.Contact)
+	 * @see com.zenika.repository.ContactRepositoryCustom#findByExample(com.zenika.model.Contact)
 	 */
 	@Override
 	public List<Contact> findByExample(Contact contact) {

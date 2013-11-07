@@ -20,7 +20,7 @@ public class AddressRepositoryImpl implements AddressRepositoryCustom {
 	@PersistenceContext private EntityManager em;
 
 	/* (non-Javadoc)
-	 * @see com.zenika.nordnet.repository.AddressRepositoryCustom#findByExample(com.zenika.nordnet.model.Address)
+	 * @see com.zenika.repository.AddressRepositoryCustom#findByExample(com.zenika.model.Address)
 	 */
 	@Override
 	public List<Address> findByExample(Address address) {

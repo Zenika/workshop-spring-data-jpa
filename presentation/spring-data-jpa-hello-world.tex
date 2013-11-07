@@ -10,10 +10,10 @@
  \end{itemize}
  
  \begin{javacode}
-package com.zenika.nordnet.repository;
+package com.zenika.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.zenika.nordnet.model.Contact;
+import com.zenika.model.Contact;
 
 public interface ContactRepository 
        extends JpaRepository<Contact,Long> {
@@ -31,7 +31,7 @@ public interface ContactRepository
  \end{itemize}
 
 \begin{xmlcode}
-<jpa:repositories base-package="com.zenika.nordnet.repository" />
+<jpa:repositories base-package="com.zenika.repository" />
 \end{xmlcode}
 
  \begin{itemize}
