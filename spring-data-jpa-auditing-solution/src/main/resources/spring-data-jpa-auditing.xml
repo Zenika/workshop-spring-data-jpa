@@ -7,11 +7,11 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd">
 
-	<jpa:repositories base-package="com.zenika.nordnet.repository" />
+	<jpa:repositories base-package="com.zenika.repository" />
 	
 	<jpa:auditing auditor-aware-ref="auditorAware" />
 	
-	<bean id="auditorAware" class="com.zenika.nordnet.model.SimpleAuditorAware" />
+	<bean id="auditorAware" class="com.zenika.model.SimpleAuditorAware" />
 	
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
@@ -26,7 +26,7 @@
 				<property name="database" value="H2" />
 			</bean>
 		</property>
-		<property name="packagesToScan" value="com.zenika.nordnet.model" />
+		<property name="packagesToScan" value="com.zenika.model" />
 		<property name="persistenceUnitName" value="zen.contact" />
 	</bean>
 

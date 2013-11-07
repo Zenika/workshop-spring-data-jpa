@@ -14,7 +14,7 @@
 				<property name="database" value="H2" />
 			</bean>
 		</property>
-		<property name="packagesToScan" value="com.zenika.nordnet.model" />
+		<property name="packagesToScan" value="com.zenika.model" />
 	</bean>
 
 	<jdbc:embedded-database id="dataSource" type="H2" />

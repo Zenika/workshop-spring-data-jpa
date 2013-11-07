@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<context:component-scan base-package="com.zenika.nordnet.repository" />
+	<context:component-scan base-package="com.zenika.repository" />
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
@@ -19,7 +19,7 @@
 				<property name="database" value="H2" />
 			</bean>
 		</property>
-		<property name="packagesToScan" value="com.zenika.nordnet.model" />
+		<property name="packagesToScan" value="com.zenika.model" />
 	</bean>
 	
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
