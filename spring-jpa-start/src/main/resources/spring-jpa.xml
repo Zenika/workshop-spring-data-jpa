@@ -6,6 +6,6 @@
 
 	<!-- TODO 02 configurer l'environnement JPA -->
 	
-	<!-- TODO 03 déclarer une base de données mémoire H2 -->
+	<jdbc:embedded-database id="dataSource" type="H2" />
 
 </beans>

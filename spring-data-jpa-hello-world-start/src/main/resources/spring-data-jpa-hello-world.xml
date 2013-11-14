@@ -9,6 +9,8 @@
 
 	<!-- TODO 02 activer la détection des repositories -->
 	
-	<!-- TODO 03 déclarer l'environnement JPA (entity manager factory, transaction manager, datasource) -->
+	<!-- TODO 03 déclarer l'environnement JPA (entity manager factory, transaction manager) -->
+	
+	<jdbc:embedded-database id="dataSource" type="H2" />
 	
 </beans>
