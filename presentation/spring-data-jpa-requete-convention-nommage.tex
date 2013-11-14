@@ -101,3 +101,39 @@ public interface ContactRepository extends Repository<Contact,Long> {
 }  
  \end{javacode}
 \end{frame}
+
+\begin{frame}[fragile]
+ \frametitle{Référence aux propriétés des propriétés}
+ \begin{javacode}
+public class Contact {
+	
+  private Address address;
+ 
+}
+ 
+public interface ContactRepository extends Repository<Contact,Long> {
+
+  List<Contact> findByAddressZipCode(String zipCode);
+
+}  
+ \end{javacode}
+\end{frame}
+
+\begin{frame}[fragile]
+ \frametitle{Pas d'ambiguité avec \_}
+ \begin{javacode}
+public class Contact {
+	
+  private Address address; // sur ce champ !
+  
+  private String addressZipCode;
+ 
+}
+ 
+public interface ContactRepository extends Repository<Contact,Long> {
+
+  List<Contact> findByAddress_ZipCode(String zipCode);
+
+}  
+ \end{javacode}
+\end{frame}
